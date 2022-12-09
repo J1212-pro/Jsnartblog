@@ -9,6 +9,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon-32x32_133150195284429835.png">
+    <style>
+       .blog-posts{
+          width: min(1200px, 100%);
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          cursor: pointer;
+        }
+
+        .post{
+          width: calc(33% - 10px);
+          overflow: hidden;
+        }
+
+        .post-img{
+          width: 100%;
+          border-radius: 6px;
+          transition: .3s linear;
+        }
+
+        .post-content{
+          background-color: #ffffffdd;
+          margin: 0 20px;
+          padding: 30px;
+          border-radius: 6px;
+          transform: translateY(-60px);
+          transition: .3s linear;
+        }
+
+        .post-content h3{
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
+        .date{
+          font-size: 15px;
+          font-style: italic;
+          color: #e77f67;
+        }
+
+        .post:hover .post-img{
+          transform: translateY(20px);
+        }
+
+        .post:hover .post-content{
+          transform: translateY(-80px);
+        }
+
+        @media screen and (max-width: 1200px){
+          .blog-posts{
+            justify-content: center;
+          }
+          .post{
+            width: min(600px, 100%);
+          }
+        }
+    </style>
   </head>
   <body>
 
@@ -130,57 +188,31 @@
 
 
     <!-- blog -->
-    <section class = "blog" id = "blog">
-      <div class = "container">
-        <div class = "title">
-          <h2>Latest Blog</h2>
-          <p>recent blogs on jsnart</p>
+    <div class="blog-posts">
+      <div class="post">
+        <img src="/images/youtube monetization.png" alt="" class="post-img">
+        <div class="post-content">
+          <h3>This post is for you if you've ever wondered how to make money off of YouTube videos. We'll go over ways to monetize YouTube, brand partnerships, video adverts, and more.</h3>
+          <span class="date">Dec 8, 2022</span>
         </div>
-        <div class = "blog-content">
-          <!-- item -->
-          <div class = "blog-item">
-            <div class = "blog-img">
-              <img src = "images/blog-p-1.png" alt = "">
-              <span><i class = "far fa-heart"></i></span>
-            </div>
-            <div class = "blog-text">
-              <span>20 January, 2022</span>
-              <h2>How to Get Youtube monetization</h2>
-              <p>This post is for you if you've ever wondered how to make money off of YouTube videos. We'll go over ways to monetize YouTube, brand partnerships, video adverts, and more.</p>
-              <a href = "#">Read More</a>
-            </div>
-          </div>
-          <!-- end of item -->
-          <!-- item -->
-          <div class = "blog-item">
-            <div class = "blog-img">
-              <img src = "images/blog-p-2.png" alt = "">
-              <span><i class = "far fa-heart"></i></span>
-            </div>
-            <div class = "blog-text">
-              <span>20 January, 2020</span>
-              <h2>How To Setup shopify sales funnel ?</h2>
-              <p>Visitors to your Shopify store are departing without making any purchases. Even though you created the coolest-looking webpage for your Shopify store, you aren't getting their attention.</p>
-              <a href = "#">Read More</a>
-            </div>
-          </div>
-          <!-- end of item -->
-          <!-- item -->
-          <div class = "blog-item">
-            <div class = "blog-img">
-              <img src = "images/blog-p-3.png" alt = "">
-              <span><i class = "far fa-heart"></i></span>
-            </div>
-            <div class = "blog-text">
-              <span>20 January, 2020</span>
-              <h2>Affiliate Marketing For Beginners</h2>
-              <p>You will market a business's goods or services as an affiliate marketer and get paid a commission for each purchase your target market makes.
-              </p>
-              <a href = "#">Read More</a>
-            </div>
-          </div>
-          <!-- end of item -->
       </div>
+  
+      <div class="post">
+        <img src="images/shopify sales.png" alt="" class="post-img">
+        <div class="post-content">
+          <h3>Visitors to your Shopify store are departing without making any purchases. Even though you created the coolest-looking webpage for your Shopify store, you aren't getting their attention.</h3>
+          <span class="date">Dec 8, 2022</span>
+        </div>
+      </div>
+  
+      <div class="post">
+        <img src="images/affiliate.png" alt="" class="post-img">
+        <div class="post-content">
+          <h3>You will market a business's goods or services as an affiliate marketer and get paid a commission for each purchase your target market makes.</h3>
+          <span class="date">Dec 8, 2022</span>
+        </div>
+      </div>
+    </div>
     </section>
     <!-- end of blog -->
 
