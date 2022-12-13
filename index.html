@@ -66,6 +66,7 @@
             width: min(600px, 100%);
           }
         }
+       container{ width: 500px; height: 250px; padding: 2rem; background-color: #fff; border-radius: 10px; display: none;}.container img{ margin-left: 26rem; cursor: pointer; height: 3.5vh;}.container h1{ margin-bottom: 1rem; text-align: center;}.container p{ font-size: 0.9rem; font-weight: 500; text-align: justify; color: #636e72;}.container button{ display: block; margin: 0.5rem auto; padding: 0.5rem; width: 120px; background-color: #c4e538; border: 0px; outline: none; color: #fff;}
     </style>
   </head>
   <body>
@@ -285,7 +286,9 @@ Best Regards.</div>
       <span>Jsnart Blog Page</span>
     </footer>
     <!-- end of footer -->
-    
+    <script>
+     document.querySelector(".close").addEventListener("click" , function(){ document.querySelector(".container").style.display = "none";}); window.addEventListener("load" , function(){ setTimeout( function open(event){ document.querySelector(".container").style.display = "block"; }, 2000 )});
+    </script>
     
   </body>
 </html>
